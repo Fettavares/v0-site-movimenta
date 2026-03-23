@@ -1,45 +1,30 @@
-import { Play, FileText, Video, Dumbbell } from "lucide-react"
+import { Play, Stretch, Wind, Lightbulb } from "lucide-react"
 import { Card, CardContent, CardHeader } from "@/components/ui/card"
 
-const contentTypes = [
+const videoContent = [
   {
-    icon: Dumbbell,
-    title: "Treinos Simples",
-    description: "Exercícios fáceis que você pode fazer em casa, sem equipamentos. Perfeitos para iniciantes!",
+    icon: Stretch,
+    title: "Alongamento",
+    description: "Exercícios de alongamento para melhorar flexibilidade e aliviar tensões musculares.",
     color: "bg-primary/10 text-primary",
   },
   {
-    icon: FileText,
-    title: "Dicas de Saúde",
-    description: "Artigos e orientações sobre alimentação, hidratação e hábitos saudáveis para o dia a dia.",
+    icon: Wind,
+    title: "Mobilidade",
+    description: "Movimentos funcionais que aumentam a amplitude de movimento e preparam o corpo.",
     color: "bg-secondary/20 text-secondary-foreground",
   },
   {
-    icon: Video,
-    title: "Vídeos Curtos",
-    description: "Demonstrações rápidas de exercícios e alongamentos para você acompanhar onde estiver.",
+    icon: Lightbulb,
+    title: "Exercícios Leves",
+    description: "Atividades de baixo impacto e fácil execução, ideais para começar ou recuperação.",
     color: "bg-primary/10 text-primary",
   },
   {
     icon: Play,
-    title: "Aulas Gravadas",
-    description: "Replay dos nossos aulões para você praticar em casa quando quiser. Sempre disponível!",
+    title: "Práticas Orientadas",
+    description: "Sessões completas com instrutor para orientação correta e motivação constante.",
     color: "bg-secondary/20 text-secondary-foreground",
-  },
-]
-
-const tips = [
-  {
-    title: "Comece Devagar",
-    description: "Não tenha pressa! Inicie com exercícios leves e vá aumentando a intensidade aos poucos.",
-  },
-  {
-    title: "Mantenha-se Hidratado",
-    description: "Beba água antes, durante e depois dos exercícios. A hidratação é fundamental!",
-  },
-  {
-    title: "Estabeleça uma Rotina",
-    description: "Escolha horários fixos para se exercitar. A consistência traz resultados!",
   },
 ]
 
@@ -50,21 +35,21 @@ export function ContentSection() {
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
           <span className="inline-block text-primary font-semibold text-sm uppercase tracking-wider mb-4">
-            Conteúdos Online
+            Conteúdos em Vídeo
           </span>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6 text-balance">
-            Continue se Movendo em Casa
+            Exercícios e Orientações Online
           </h2>
           <p className="text-lg text-muted-foreground leading-relaxed">
-            Além dos aulões presenciais, oferecemos conteúdos digitais para você manter 
-            a atividade física em dia, onde quer que esteja.
+            Tenha acesso a vídeos de exercícios, orientações e práticas para incentivar uma vida mais ativa, 
+            sem sair de casa. Conteúdos criados para todos os níveis de condicionamento físico.
           </p>
         </div>
 
-        {/* Content Types Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
-          {contentTypes.map((content) => (
-            <Card key={content.title} className="group hover:shadow-lg transition-all duration-300 border-border hover:border-primary/30">
+        {/* Video Content Grid */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          {videoContent.map((content) => (
+            <Card key={content.title} className="group hover:shadow-lg transition-all duration-300 border-border hover:border-primary/30 overflow-hidden">
               <CardHeader className="pb-4">
                 <div className={`inline-flex items-center justify-center w-14 h-14 rounded-xl ${content.color} mb-4 group-hover:scale-110 transition-transform`}>
                   <content.icon className="h-7 w-7" />
@@ -74,7 +59,7 @@ export function ContentSection() {
                 </h3>
               </CardHeader>
               <CardContent>
-                <p className="text-muted-foreground">
+                <p className="text-muted-foreground leading-relaxed">
                   {content.description}
                 </p>
               </CardContent>
@@ -82,25 +67,48 @@ export function ContentSection() {
           ))}
         </div>
 
-        {/* Tips Section */}
-        <div className="bg-card rounded-3xl border border-border p-8 md:p-12">
-          <h3 className="text-2xl font-bold text-foreground mb-8 text-center">
-            Dicas para Começar Sua Jornada
-          </h3>
-          <div className="grid md:grid-cols-3 gap-8">
-            {tips.map((tip, index) => (
-              <div key={tip.title} className="text-center">
-                <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-primary text-primary-foreground font-bold text-xl mb-4">
-                  {index + 1}
-                </div>
-                <h4 className="text-lg font-bold text-foreground mb-2">
-                  {tip.title}
-                </h4>
-                <p className="text-muted-foreground">
-                  {tip.description}
+        {/* Info Section */}
+        <div className="mt-16 bg-card rounded-3xl border border-border p-8 md:p-12">
+          <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
+            <div>
+              <h3 className="text-2xl font-bold text-foreground mb-6">
+                Por Que Fazer Exercício Online?
+              </h3>
+              <ul className="space-y-4">
+                <li className="flex gap-3">
+                  <span className="inline-flex items-center justify-center w-6 h-6 rounded-full bg-primary text-primary-foreground text-sm font-bold flex-shrink-0">
+                    ✓
+                  </span>
+                  <span className="text-foreground">Praticidade: treina quando quiser</span>
+                </li>
+                <li className="flex gap-3">
+                  <span className="inline-flex items-center justify-center w-6 h-6 rounded-full bg-primary text-primary-foreground text-sm font-bold flex-shrink-0">
+                    ✓
+                  </span>
+                  <span className="text-foreground">Segurança: exercícios apropriados para seu nível</span>
+                </li>
+                <li className="flex gap-3">
+                  <span className="inline-flex items-center justify-center w-6 h-6 rounded-full bg-primary text-primary-foreground text-sm font-bold flex-shrink-0">
+                    ✓
+                  </span>
+                  <span className="text-foreground">Acompanhamento: instruções claras e profissionais</span>
+                </li>
+                <li className="flex gap-3">
+                  <span className="inline-flex items-center justify-center w-6 h-6 rounded-full bg-primary text-primary-foreground text-sm font-bold flex-shrink-0">
+                    ✓
+                  </span>
+                  <span className="text-foreground">Consistência: mantenha o ritmo entre os aulões</span>
+                </li>
+              </ul>
+            </div>
+            <div className="bg-gradient-to-br from-primary/20 to-secondary/10 rounded-2xl p-8 min-h-[300px] flex items-center justify-center">
+              <div className="text-center">
+                <Play className="h-20 w-20 text-primary mx-auto mb-4 opacity-50" />
+                <p className="text-lg font-semibold text-foreground">
+                  Acesse nossos vídeos agora
                 </p>
               </div>
-            ))}
+            </div>
           </div>
         </div>
       </div>
