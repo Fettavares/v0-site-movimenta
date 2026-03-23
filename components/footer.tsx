@@ -1,6 +1,6 @@
 import Image from "next/image"
 import Link from "next/link"
-import { Instagram, Mail, Heart } from "lucide-react"
+import { Instagram, Heart } from "lucide-react"
 
 const navLinks = [
   { href: "#inicio", label: "Início" },
@@ -35,20 +35,13 @@ export function Footer() {
             </p>
             <div className="flex gap-4">
               <a
-                href="https://instagram.com/movimentamais"
+                href="https://www.instagram.com/projeto_movimentamais/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 rounded-full bg-background/10 hover:bg-background/20 flex items-center justify-center transition-colors"
                 aria-label="Instagram"
               >
                 <Instagram className="h-5 w-5" />
-              </a>
-              <a
-                href="mailto:contato@movimentamais.com.br"
-                className="w-10 h-10 rounded-full bg-background/10 hover:bg-background/20 flex items-center justify-center transition-colors"
-                aria-label="E-mail"
-              >
-                <Mail className="h-5 w-5" />
               </a>
             </div>
           </div>
@@ -73,9 +66,15 @@ export function Footer() {
           <div>
             <h4 className="font-bold text-lg mb-4">Contato</h4>
             <div className="space-y-3 text-background/70">
-              <p>Parque das Águas</p>
-              <p>contato@movimentamais.com.br</p>
-              <p>@movimentamais</p>
+              <a
+                href="https://www.instagram.com/projeto_movimentamais/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 hover:text-background transition-colors"
+              >
+                <Instagram className="h-4 w-4" />
+                @projeto_movimentamais
+              </a>
             </div>
           </div>
         </div>

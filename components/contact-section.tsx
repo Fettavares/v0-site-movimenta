@@ -5,28 +5,7 @@ import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Textarea } from "@/components/ui/textarea"
-import { Instagram, Mail, MessageCircle, Send, CheckCircle } from "lucide-react"
-
-const socialLinks = [
-  {
-    icon: Instagram,
-    label: "Instagram",
-    href: "https://instagram.com/movimentamais",
-    color: "hover:bg-pink-100 hover:text-pink-600",
-  },
-  {
-    icon: MessageCircle,
-    label: "WhatsApp",
-    href: "https://wa.me/5500000000000",
-    color: "hover:bg-green-100 hover:text-green-600",
-  },
-  {
-    icon: Mail,
-    label: "E-mail",
-    href: "mailto:contato@movimentamais.com.br",
-    color: "hover:bg-blue-100 hover:text-blue-600",
-  },
-]
+import { Instagram, Send, CheckCircle } from "lucide-react"
 
 export function ContactSection() {
   const [isSubmitted, setIsSubmitted] = useState(false)
@@ -64,30 +43,18 @@ export function ContactSection() {
               <h3 className="text-xl font-bold text-foreground mb-6">
                 Nossas Redes
               </h3>
-              <div className="space-y-4 mb-10">
-                {socialLinks.map((social) => (
-                  <a
-                    key={social.label}
-                    href={social.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className={`flex items-center gap-4 p-4 rounded-xl border border-border bg-card transition-colors ${social.color}`}
-                  >
-                    <social.icon className="h-6 w-6" />
-                    <span className="font-medium">{social.label}</span>
-                  </a>
-                ))}
-              </div>
-
-              <div className="bg-muted/50 rounded-2xl p-6">
-                <h4 className="font-bold text-foreground mb-3">
-                  Horário de Atendimento
-                </h4>
-                <p className="text-muted-foreground">
-                  Segunda a Sexta: 9h às 18h<br />
-                  Sábados: 8h às 12h
-                </p>
-              </div>
+              <a
+                href="https://www.instagram.com/projeto_movimentamais/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-4 p-4 rounded-xl border border-border bg-card transition-colors hover:bg-pink-50 hover:text-pink-600 hover:border-pink-200"
+              >
+                <Instagram className="h-6 w-6" />
+                <div>
+                  <p className="font-semibold">Instagram</p>
+                  <p className="text-sm text-muted-foreground">@projeto_movimentamais</p>
+                </div>
+              </a>
             </div>
 
             {/* Contact Form */}
