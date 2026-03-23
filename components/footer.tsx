@@ -24,9 +24,9 @@ export function Footer() {
               <Image
                 src="/images/logo.png"
                 alt="Movimenta+ Logo"
-                width={160}
-                height={64}
-                className="h-16 w-auto brightness-0 invert"
+                width={120}
+                height={48}
+                className="h-12 w-auto"
               />
             </Link>
             <p className="text-background/70 max-w-md mb-6">
