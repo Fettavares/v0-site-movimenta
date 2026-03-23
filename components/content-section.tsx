@@ -1,9 +1,9 @@
-import { Play, Stretch, Wind, Lightbulb } from "lucide-react"
+import { Play, Zap, Wind, Lightbulb } from "lucide-react"
 import { Card, CardContent, CardHeader } from "@/components/ui/card"
 
 const videoContent = [
   {
-    icon: Stretch,
+    icon: Zap,
     title: "Alongamento",
     description: "Exercícios de alongamento para melhorar flexibilidade e aliviar tensões musculares.",
     color: "bg-primary/10 text-primary",
