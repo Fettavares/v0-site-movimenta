@@ -14,13 +14,13 @@ const events = [
     title: "Aulão Funcional para Iniciantes",
     date: "20 de abril",
     time: "9h",
-    location: "Praça da Liberdade – Resende",
+    location: "Parque das Águas – Resende",
   },
   {
     title: "Aulão Saúde em Movimento",
     date: "27 de abril",
     time: "8h30",
-    location: "Jardim de Alah – Resende",
+    location: "Parque das Águas – Resende",
   },
 ]
 
@@ -45,12 +45,12 @@ export function ClassesSection() {
         {/* Events Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
           {events.map((event, index) => (
-            <Card key={index} className="group hover:shadow-lg transition-all duration-300 border-border hover:border-primary/30 overflow-hidden">
-              <CardContent className="p-8">
+            <Card key={index} className="group hover:shadow-lg transition-all duration-300 border-border hover:border-primary/30 overflow-hidden flex flex-col">
+              <CardContent className="p-8 flex flex-col h-full">
                 <h3 className="text-xl font-bold text-foreground mb-6 leading-tight">
                   {event.title}
                 </h3>
-                <div className="space-y-4">
+                <div className="space-y-4 flex-1">
                   <div className="flex items-start gap-3">
                     <Calendar className="h-5 w-5 text-primary flex-shrink-0 mt-1" />
                     <div>
